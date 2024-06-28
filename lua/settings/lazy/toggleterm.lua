@@ -4,7 +4,7 @@ return {
     config = function()
         require("toggleterm").setup{
             open_mapping = [[<C-\>]],
-            direction = 'float',
+            direction = 'tab',
             auto_scroll = true,
             close_on_exit = true
         }
