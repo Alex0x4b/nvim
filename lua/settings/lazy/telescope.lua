@@ -15,5 +15,8 @@ return {
         vim.keymap.set('n', '<leader>ps', function()
             builtin.grep_string({ search = vim.fn.input("Grep > ") })
         end)
+        vim.keymap.set('n', '<Leader>t', function()
+            vim.cmd(':Telescope find_template type=insert')
+        end, { remap = true})
     end
 }
