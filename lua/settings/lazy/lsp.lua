@@ -29,7 +29,8 @@ return {
                 "rust_analyzer",
                 "html",
                 "cssls",
-                "pylsp"
+                "pylsp",
+                "tsserver"
             },
             handlers = {
                 function(server_name) -- default handler (optional)
