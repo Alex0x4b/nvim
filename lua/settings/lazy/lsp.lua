@@ -30,7 +30,8 @@ return {
                 "html",
                 "cssls",
                 "pylsp",
-                "tsserver"
+                "tsserver",
+                "quick_lint_js"
             },
             handlers = {
                 function(server_name) -- default handler (optional)
