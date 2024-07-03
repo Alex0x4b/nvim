@@ -42,6 +42,9 @@ vim.opt.history=500
 -- do incremental searching
 vim.opt.incsearch = true
 
+-- max items in completion windows
+vim.opt.pumheight = 10
+
 -- make search case insensitive...
 vim.opt.ignorecase = true
 
