@@ -9,6 +9,11 @@ return {
                 lualine_x = {},
                 lualine_y = {},
                 lualine_z = {'tabs'}
+            },
+            sections = {
+                lualine_c = {
+                    { 'filename', path = 1 }
+                }
             }
         }
     end
