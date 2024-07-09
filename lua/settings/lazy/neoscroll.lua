@@ -5,8 +5,5 @@ return {
         easing = 'cubic'
 
     })
-    require('neoscroll').scroll(
-        30, {move_cursor=true, duration=100}
-    )
   end
 }
