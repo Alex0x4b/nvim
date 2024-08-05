@@ -23,6 +23,7 @@ return {
             cmp_lsp.default_capabilities())
         require("fidget").setup({})
         require("mason").setup()
+        require('lspconfig').tailwindcss.setup{}
         require("mason-lspconfig").setup({
             ensure_installed = {
                 "lua_ls",
@@ -31,7 +32,8 @@ return {
                 "cssls",
                 "pylsp",
                 "tsserver",
-                "quick_lint_js"
+                "quick_lint_js",
+                "tailwindcss"
             },
             handlers = {
                 function(server_name) -- default handler (optional)
@@ -67,7 +69,7 @@ return {
                             },
                         }
                 }
-                end
+                end,
             }
         })
 
