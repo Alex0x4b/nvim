@@ -12,22 +12,14 @@ def main_{{_file_name_}}(data_dir, local_storage):
 if __name__ == "__main__":
     """
     # all
-    from nsp.analyse.{{_file_name_}} import *
-    from datetime import datetime
-    extract_kwargs = {
-        "date_ref": datetime(2024, 10, 31),
-        "prf_month_contract": 27,
-    }
+    from nsp.analyses.{{_file_name_}} import *
+    data_dir = "data"
 
     # gdp
-    data_dir="data"
     local_storage = False
     read_csv_kwargs = {"nrows": None}
 
-
     # local
-    data_dir = "data"
     local_storage = True
     read_csv_kwargs = {"nrows": 50000}
     """
-    {{_cursor_}}
