@@ -30,6 +30,8 @@ return {
                 "html",
                 "cssls",
                 "pylsp",
+                "ruff",
+                "ruff_lsp",
                 "tsserver",
                 "quick_lint_js",
                 "tailwindcss";
@@ -38,19 +40,19 @@ return {
             handlers = {
                 function(server_name) -- default handler (optional)
 
-                    require("lspconfig")[server_name].setup {
-                        capabilities = capabilities
-                    }
+                  require("lspconfig")[server_name].setup {
+                    capabilities = capabilities
+                  }
                 end,
                 ["lua_ls"] = function()
                     local lspconfig = require("lspconfig")
                     lspconfig.lua_ls.setup {
                         cpabilities = capabilities,
-                        settings = {
-                            Lua = {
-                                runtime = { version = "Lua 5.1" },
-                                diagnostics = {
-                                    globals = { "vim", "it", "describe", "before_each", "after_each" },
+                            settings = {
+                                Lua = {
+                                   runtime = { version = "Lua 5.1" },
+                                   diagnostics = {
+                                   globals = { "vim", "it", "describe", "before_each", "after_each" },
                                 }
                             }
                         }
@@ -61,19 +63,16 @@ return {
                         settings = {
                             pylsp = {
                                 plugins = {
-                                    flake8 = { enabled = true },
-                                    mccabe = { enabled = false },
-                                    pyflakes = { enabled = false },
-                                    pycodestyle = { enabled = false },
+                                   flake8 = { enabled = false},
+                                   mccabe = { enabled = false },
+                                   pyflakes = { enabled = false },
+                                   pycodestyle = { enabled = false },
                                 },
                             },
                         }
-                }
+                    }
                 end,
-            }
-        })
-
-        -- local cmp_select = { behavior = cmp.SelectBehavior.Select }
+            }})
 
         cmp.setup({
             snippet = {
