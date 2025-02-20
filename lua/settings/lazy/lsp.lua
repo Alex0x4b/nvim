@@ -26,16 +26,15 @@ return {
         require("mason-lspconfig").setup({
             ensure_installed = {
                 "lua_ls",
-                "rust_analyzer",
                 "html",
+                "htmx",
                 "cssls",
+                "tailwindcss",
                 "pylsp",
                 "ruff",
-                "ruff_lsp",
+                "jinja_lsp",
                 "tsserver",
                 "quick_lint_js",
-                "tailwindcss";
-                "htmx",
             },
             handlers = {
                 function(server_name) -- default handler (optional)

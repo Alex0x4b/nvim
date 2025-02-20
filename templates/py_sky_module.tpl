@@ -12,7 +12,7 @@ def main_{{_file_name_}}(data_dir, local_storage):
 if __name__ == "__main__":
     """
     # all
-    from nsp.analyses.{{_file_name_}} import *
+    from nsp.prev.analyses.{{_file_name_}} import *
     data_dir = "data"
 
     # gdp
