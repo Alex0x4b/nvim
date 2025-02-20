@@ -9,6 +9,7 @@ return {
                 "jsdoc", "bash", "python", "css", "html", "markdown", "yaml", "json",
                 "markdown_inline", "rst"
             },
+            ignore_install = {"htmldjango"},
 
             -- Install parsers synchronously (only applied to `ensure_installed`)
             sync_install = false,
@@ -29,17 +30,17 @@ return {
                 -- Set this to `true` if you depend on "syntax" being enabled (like for indentation).
                 -- Using this option may slow down your editor, and you may see some duplicate highlights.
                 -- Instead of true it can also be a list of languages
-                additional_vim_regex_highlighting = { "markdown" },
+                additional_vim_regex_highlighting = false,
             },
         })
 
         local treesitter_parser_config = require("nvim-treesitter.parsers").get_parser_configs()
         treesitter_parser_config.templ = {
-            install_info = {
-                url = "https://github.com/vrischmann/tree-sitter-templ.git",
-                files = {"src/parser.c", "src/scanner.c"},
-                branch = "master",
-            },
+          install_info = {
+            url = "https://github.com/vrischmann/tree-sitter-templ.git",
+            files = {"src/parser.c", "src/scanner.c"},
+            branch = "master",
+          },
         }
     end
 }
