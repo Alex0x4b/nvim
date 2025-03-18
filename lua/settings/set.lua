@@ -57,3 +57,11 @@ vim.api.nvim_create_autocmd({"BufReadPost"}, {
         end
     end
 })
+
+-- set all html as regular html (avoid detected as djangohtml)
+vim.api.nvim_create_autocmd({"BufReadPost"}, {
+    pattern = {"*.html"},
+    callback = function()
+      vim.bo.filetype = "html"
+    end
+})
