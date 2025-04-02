@@ -1,12 +1,13 @@
 ;; python
-# import pandas as pd
 # import akutils as ak
+# import pandas as pd
+
 from nsp import utils_nsp
 
 
 def main_{{_file_name_}}(data_dir, local_storage):
     path_to_data = utils_nsp.get_path_to_data(data_dir, local_storage)
-    return path_to_data
+    return
 
 
 if __name__ == "__main__":

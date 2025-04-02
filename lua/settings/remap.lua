@@ -17,13 +17,18 @@ vim.keymap.set("n", "<leader><leader>", function()
 end)
 
 -- Buffer
-vim.keymap.set('n', '<C-j>', ':bnext<CR>', {
+vim.keymap.set('n', '<C-k>', ':bnext<CR>', {
+    noremap = true,
+    silent = true,
+    desc = 'Go to previous buffer'
+})
+vim.keymap.set('n', '<C-j>', ':bprevious<CR>', {
     noremap = true,
     silent = true,
     desc = 'Go to next buffer'
 })
-vim.keymap.set('n', '<C-k>', ':bprevious<CR>', {
+vim.keymap.set('n', '<C-x>', ':bd<CR>', {
     noremap = true,
     silent = true,
-    desc = 'Go to previous buffer'
+    desc = 'Close current buffer'
 })
